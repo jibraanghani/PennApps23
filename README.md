@@ -4,6 +4,8 @@ We had four main components that were integrated in this project: hardware, firm
 
 Video Demo: https://www.youtube.com/watch?v=_UXkjc75MEE
 
+Presentation: https://docs.google.com/presentation/d/1yJXEyUW9XOk2eHzTgXI2spUZmKuxz7Gd4XMvX70FGTA/edit#slide=id.p
+
 HARDWARE
 
 We used hardware to control the peripherals of the car such as the fan and the LED strip lights (Neopixel). For the fan, we used a transistor-driver circuit and pulse width modulation from the Arduino UNO to vary the duty cycle of the input wave and hence change the speed of the fan. Two resistors were attached to the gate of the power transistor to ensure: one to drive the GPIO and the other to ensure that it was not floating when there’s no voltage present at it. A diode was also attached between drain and source in case the fan generated back EMF. A regulator (78L05) was used to supply voltage and current to the LED since it needed lower voltage supply but a higher current. This was easier to program as it didn’t require PWM. The Neopixel library was used to control the brightness of the LEDs, its color, etc. A radio module, nRF24L01+, was used to communicate between the first Arduino UNO connected to the peripherals and the second Arduino UNO connected to the laptop running the computer vision python script and the backend. The communication over the radio was done using a library and a single integer was sent that encoded both the device that was chosen as well as its control. More specifically, this was the encoding used - 1: light, 2: fan then 1: on, 2: off, 3: increase, 4: decrease.
