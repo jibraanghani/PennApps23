@@ -1,4 +1,4 @@
-# PennApps23
+# ambi. computing: PennApps23
 
 We had four main components that were integrated in this project: hardware, firmware, backend, and frontend. The hardware represents the physical functionalities of the car (ex. lights, fan, speaker). In our demonstration, we simulated the lights and the fan of a car. 
 
